@@ -31,7 +31,6 @@ int main() {
     for (size_t i = 0; i < days.size(); i++) {
         string classification;
         
-        // Classify the temperature
         if (temperatures[i] < 10) {
             classification = "Cold";
         } else if (temperatures[i] <= 20) {
@@ -40,7 +39,6 @@ int main() {
             classification = "Warm";
         }
         
-        // Print day, temperature and classification
         cout << days[i] << ": " << temperatures[i] << "°C - " << classification << endl;
         
         // Track warmest day
@@ -53,7 +51,7 @@ int main() {
     // Store warmest day in a tuple
     tuple<string, double> warmestDayInfo = make_tuple(warmestDay, maxTemp);
     
-    // Print the warmest day information
+    // Print the information
     cout << "\n= Warmest Day of the Week =\n";
     cout << "Day: " << get<0>(warmestDayInfo) << endl;
     cout << "Temperature: " << get<1>(warmestDayInfo) << "°C" << endl;
