@@ -13,7 +13,7 @@ int main() {
     // Vector to store temperature readings for each day
     vector<double> temperatures;
     
-    cout << "Enter temperature readings for each day of the week:\n";
+    cout << "Enter temperature readings for each day of the week:\n"<< std::endl;
     for (const auto& day : days) {
         double temp;
         cout << day << ": ";
@@ -21,7 +21,7 @@ int main() {
         temperatures.push_back(temp);
     }
     
-    cout << "\n= Weather Data for the Week =\n";
+    cout << "\n= Weather Data for the Week =\n"<< std::endl;
     
     // Variables to track the warmest day
     double maxTemp = -numeric_limits<double>::infinity();
@@ -52,9 +52,9 @@ int main() {
     tuple<string, double> warmestDayInfo = make_tuple(warmestDay, maxTemp);
     
     // Print the information
-    cout << "\n= Warmest Day of the Week =\n";
-    cout << "Day: " << get<0>(warmestDayInfo) << endl;
-    cout << "Temperature: " << get<1>(warmestDayInfo) << "°C" << endl;
+    cout << "\n= Warmest Day of the Week =\n"<< std::endl;
+    cout << "Day: " << get<0>(warmestDayInfo) << std::endl;
+    cout << "Temperature: " << get<1>(warmestDayInfo) << "°C" << std::endl;
     
     return 0;
 }
