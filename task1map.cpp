@@ -73,8 +73,8 @@ int main() {
     
     // For calculations
     double totalTemp = 0;
-    double maxTemp = -100.0;
-    double minTemp = 100.0;
+    double maxTemp = 100.0;
+    double minTemp = -100.0;
     string warmestDay, coldestDay;
     
     cout << "Daily Weather Details:"<< std::endl;
